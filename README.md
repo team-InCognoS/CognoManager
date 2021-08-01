@@ -1,5 +1,5 @@
 # CognoManager
-The main repo for the _CognoManager_ project.
+The main repo for the _CognoManager_ project. </br>
 _CognoManager_ is a discord bot that manages the **team InCognoS Opensource** server!
 
 To connect with us [join us](https://discord.com/invite/9fTdkZne) along! 
