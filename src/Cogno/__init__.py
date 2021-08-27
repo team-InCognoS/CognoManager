@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from discord_slash import SlashCommand
 from glob import glob
 from asyncio import sleep
+from discord import Embed, Color
 
 load_dotenv()
 
@@ -63,6 +64,20 @@ class CognoS(cm):
     async def on_message(self,msg):
         await self.process_commands(msg)
 
+    async def on_guild_join(self,member):
+
+        Embed = discord.Embed(title="Welcome", color=Color.from_rgb(198, 197, 255))
+        Embed.add_field(name="Hola, Hallo, Bonjour, Namaskara!",
+                        value=f"Hi {member.mention}! Welcome to **{member.guild}**! Please follow the rules in #rules channel for the betterment of")
+        Embed.set_thumbnail(url=member.guild.icon_url)
+        channel = member.guild.system_channel
+        await channel.send(embed=Embed)
+        
+        embed = discord.Embed(title="Welcome", color=Color.from_rgb(198, 197, 255),
+                              description=f"Hi {member.mention}! Welcome to **{member.guild}**!")
+        embed.set_thumbnail(url=member.guild.icon_url)
+        await member.send(embed=embed)
+        
     def setup(self):
         for cog in COGS:
             self.load_extension(f"cogno.cogs.{cog}")

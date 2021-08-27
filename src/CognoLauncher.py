@@ -1,3 +1,3 @@
-from Cogno import InCognoS
+from cogno import InCognoS
 
 InCognoS.run()
