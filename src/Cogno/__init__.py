@@ -64,7 +64,7 @@ class CognoS(cm):
     async def on_message(self,msg):
         await self.process_commands(msg)
 
-    async def on_guild_join(self,member):
+    async def on_member_join(self,member):
 
         Embed = discord.Embed(title="Welcome", color=Color.from_rgb(198, 197, 255))
         Embed.add_field(name="Hola, Hallo, Bonjour, Namaskara!",
