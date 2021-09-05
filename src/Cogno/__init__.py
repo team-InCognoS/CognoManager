@@ -67,7 +67,7 @@ class CognoS(cm):
     async def on_member_join(self,member):
 
         Embed = discord.Embed(title="Welcome", color=Color.from_rgb(198, 197, 255))
-        Embed.add_field(name="Hola, Hallo, Bonjour, Namaskara!",
+        Embed.add_field(name="Hola, Hallo, Bonjour!",
                         value=f"Hi {member.mention}! Welcome to **{member.guild}**! Please follow the rules in #rules channel for the betterment of")
         Embed.set_thumbnail(url=member.guild.icon_url)
         channel = member.guild.system_channel
