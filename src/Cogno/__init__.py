@@ -13,7 +13,7 @@ load_dotenv()
 
 PREFIX = ";"
 OWNER_ID=[462313177359843328]
-COGS=[path.split("\\")[-1][:-3] for path in glob("./src/cogno/cogs/*.py")]
+COGS=[path.split("\\")[-1][:-3] for path in glob("./src/Cogno/cogs/*.py")]
 
 
 class Ready(object):
@@ -82,7 +82,7 @@ class CognoS(cm):
         print(COGS)
         for cog in COGS:
             print(cog)
-            self.load_extension(f"cogno.cogs.{cog}")
+            self.load_extension(f"Cogno.cogs.{cog}")
             print(f"{cog} cog loaded!")
         print("Setup Complete!")
 
