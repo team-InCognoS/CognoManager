@@ -13,7 +13,8 @@ load_dotenv()
 
 PREFIX = ";"
 OWNER_ID=[462313177359843328]
-COGS=[path.split("\\")[-1][17:][:-3] for path in glob("./src/Cogno/cogs/*.py")]
+COGS=[path.split("\\")[-1][17:][:-3] for path in glob("./src/Cogno/cogs/*.py")] # Heroku Version
+# COGS=[path.split("\\")[-1][:-3] for path in glob("./src/Cogno/cogs/*.py")] # Local Version
 
 
 class Ready(object):
@@ -79,9 +80,7 @@ class CognoS(cm):
         await member.send(embed=embed)
         
     def setup(self):
-        print(COGS)
         for cog in COGS:
-            print(cog)
             self.load_extension(f"Cogno.cogs.{cog}")
             print(f"{cog} cog loaded!")
         print("Setup Complete!")
