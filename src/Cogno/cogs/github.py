@@ -41,7 +41,7 @@ class GithubCommands(Cog):
         lang_emb = ''
         for lang in languages_used:
             lang_emb+=f'{lang}\n'
-        embed = Embed(title = repo_name,description = f'{cloneUrl} \n'+readme+f'\n*Languages Used:*\n >>> {lang_emb} ')
+        embed = Embed(title = repo_name,description = f'{cloneUrl} \n\n'+readme+f'*Languages Used:*\n >>> {lang_emb} ')
         embed.set_thumbnail(url=url)
         await ctx.defer()
         await ctx.send(embed=embed)
