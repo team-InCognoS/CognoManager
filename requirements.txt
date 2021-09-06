@@ -10,10 +10,10 @@ charset-normalizer==2.0.4
 cryptography==3.4.8
 Deprecated==1.2.12
 discord-py-slash-command==3.0.1
-discord.py==1.7.3
 heroku==0.1.4
 idna==3.2
 multidict==5.1.0
+py-cord==1.7.3
 pycodestyle==2.7.0
 pycparser==2.20
 PyGithub==1.55
