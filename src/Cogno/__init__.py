@@ -79,10 +79,11 @@ class CognoS(cm):
         await member.send(embed=embed)
         
     def setup(self):
+        print(COGS)
         for cog in COGS:
+            print(cog)
             self.load_extension(f"cogno.cogs.{cog}")
             print(f"{cog} cog loaded!")
-            print(cog)
         print("Setup Complete!")
 
     def run(self):
