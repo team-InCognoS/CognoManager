@@ -80,7 +80,7 @@ class CognoS(cm):
         
     def setup(self):
         for cog in COGS:
-            self.load_extension(f"cogno.cogs.{cog}")
+            self.load_extension(f"Cogno.cogs.{cog}")
             print(f"{cog} cog loaded!")
         print("Setup Complete!")
 
