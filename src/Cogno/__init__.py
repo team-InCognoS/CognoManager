@@ -13,7 +13,7 @@ load_dotenv()
 
 PREFIX = ";"
 OWNER_ID=[462313177359843328]
-COGS=[path.split("\\")[-1][:-3] for path in glob("./src/Cogno/cogs/*.py")]
+COGS=[path.split("\\")[-1][16:][:-3] for path in glob("./src/Cogno/cogs/*.py")]
 
 
 class Ready(object):
